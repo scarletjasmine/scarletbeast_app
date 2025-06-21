@@ -4,12 +4,11 @@ import { Transition } from '@headlessui/react';
 import { Button, Card, Col, Form, Row } from 'react-bootstrap';
 import React from 'react';
 
-export default function UpdateProfileInformation({ mustVerifyEmail, status, className = '' }: any) {
+export default function UpdateCryptoCurrrencyForm({ status, className = '' }: any) {
     const user = usePage().props.auth.user;
 
     const { data, setData, patch, errors, processing, recentlySuccessful } = useForm({
-        name: user.name,
-        email: user.email,
+        ether_address: user.ether_address
     });
 
     const submit = (e: any) => {
@@ -25,7 +24,7 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
             <Card >
 
                 <p className="text-muted p-2">
-                    Update your account's profile information and email address.
+                    Update your ethereum address.
                 </p>
                 <Card.Body>
                     <Form onSubmit={submit} className="mt-6 space-y-6">
