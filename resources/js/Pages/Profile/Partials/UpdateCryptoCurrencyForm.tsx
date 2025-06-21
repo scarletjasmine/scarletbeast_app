@@ -4,16 +4,27 @@ import { Transition } from '@headlessui/react';
 import { Button, Card, Col, Form, Row } from 'react-bootstrap';
 import React from 'react';
 
+import { isAddress } from '@ethersproject/address';
+
+
+
 export default function UpdateCryptoCurrrencyForm({ status, className = '' }: any) {
     const user = usePage().props.auth.user;
 
     const { data, setData, patch, errors, processing, recentlySuccessful } = useForm({
         ether_address: user.ether_address
     });
-
+    const isValidEthereumAddress = (address) => {
+      if (typeof address !== 'string') {
+        return false;
+      }
+      return isAddress(address);
+    };
     const submit = (e: any) => {
         e.preventDefault();
-
+        if (!isValidEthereumAddress(data.ether_address)){
+            alert('Invalid Ethereum address');
+        }
         patch(route('profile.update'));
     };
 
