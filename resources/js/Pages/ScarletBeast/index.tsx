@@ -1,4 +1,4 @@
-
+import React from 'react';
 
 const ScarletBeast = () => {
   return (
@@ -9,5 +9,4 @@ const ScarletBeast = () => {
     </React.Fragment>
     );
 };
-ScarletBeast.layout = (page: any) => <Layout children={page} />;
 export default ScarletBeast;
