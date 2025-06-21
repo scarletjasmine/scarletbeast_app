@@ -4,7 +4,7 @@ const ScarletBeast = () => {
   return (
     <>
       <h1>ScarletBeast</h1>
-      <h2>ScarletBeast</h2>
+      <p><Link href={route('login')} >Login</Link></p>
   
     </>
     );
