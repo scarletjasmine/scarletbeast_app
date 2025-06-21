@@ -29,7 +29,7 @@ class EthereumAddress implements Rule
 
     public function message()
     {
-        return 'The :attribute must be a valid Ethereum address.';
+        return 'The attribute must be a valid Ethereum address.';
     }
 }
 
