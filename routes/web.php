@@ -42,7 +42,7 @@ Route::middleware('auth')->group(function () {
     Route::controller(VelzonRoutesController::class)->group(function () {
 
         // dashboard routes
-        // Route::inertia('/', 'Dashboard')->name('index');
+        Route::inertia('/', 'ScarletBeast/index')->name('index');
         Route::get("/dashboard", "index");
         Route::get("/dashboard-analytics", "dashboard_analytics");
         Route::get("/dashboard-crm", "dashboard_crm");
