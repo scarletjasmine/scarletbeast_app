@@ -30,8 +30,7 @@ class ProfileController extends Controller
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
         echo "<pre>";
-        var_dump($request->validated());
-        var_dump($request->user());
+        var_dump($request);
         die();
         $request->user()->fill($request->validated());
 
