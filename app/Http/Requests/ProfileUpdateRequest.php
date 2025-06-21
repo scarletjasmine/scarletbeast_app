@@ -18,7 +18,7 @@ class ProfileUpdateRequest extends FormRequest
     public function rules(): array
     {
         
-        $input =$ $this->all();
+        $input = $this->all();
         var_dump($input);
         die();
         return [
