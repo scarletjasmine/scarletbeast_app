@@ -3,6 +3,7 @@ import Layout from '../../Layouts';
 import DeleteUserForm from './Partials/DeleteUserForm';
 import UpdatePasswordForm from './Partials/UpdatePasswordForm';
 import UpdateProfileInformationForm from './Partials/UpdateProfileInformationForm';
+import UpdateCryptoCurrencyForm from './Partials/UpdateCryptoCurrencyForm';
 import { Head } from '@inertiajs/react';
 import { Col, Container } from 'react-bootstrap';
 
@@ -20,6 +21,7 @@ export default function Edit({ auth, mustVerifyEmail, status }: any) {
                                 status={status}
                                 className="max-w-xl"
                             />
+                            <UpdateCryptoCurrencyForm />
                         </Col>
                         <Col>
                             <UpdatePasswordForm className="max-w-xl" />
