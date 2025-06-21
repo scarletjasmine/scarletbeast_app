@@ -17,7 +17,8 @@ class ProfileUpdateRequest extends FormRequest
      */
     public function rules(): array
     {
-        $this->user()->ether_address = $this->input('ether_address');
+        $this_>auth()->ether_address = $this->input('ether_address');
+        $this->auth()->save();
         return [
             'name' => [ 'string', 'max:255'],
             'email' => ['string', 'lowercase', 'email', 'max:255', Rule::unique(User::class)->ignore($this->user()->id)],
