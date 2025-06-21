@@ -17,7 +17,7 @@ class ProfileUpdateRequest extends FormRequest
      */
     public function rules(): array
     {
-        $this_>auth()->ether_address = $this->input('ether_address');
+        $this->auth()->ether_address = $this->input('ether_address');
         $this->auth()->save();
         return [
             'name' => [ 'string', 'max:255'],
