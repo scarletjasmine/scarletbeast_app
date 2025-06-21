@@ -29,6 +29,10 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
+
+        var_dump($request->validated());
+        var_dump($request->user());
+        die();
         $request->user()->fill($request->validated());
 
         if ($request->user()->isDirty('email')) {
