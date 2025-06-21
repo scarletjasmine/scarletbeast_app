@@ -30,7 +30,7 @@ class ProfileController extends Controller
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
 
-        echo $request->user()->ether_address;
+        var_dump($request->user());
         die();
         $request->user()->fill($request->validated());
 
