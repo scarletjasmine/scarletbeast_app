@@ -10,7 +10,7 @@ const ScarletBeast = () => {
       <>
         <h1>ScarletBeast</h1>
         <p><Link href={route('login')} >Login</Link></p>
-        <p><Link href={route('logout')} >Login</Link></p>
+        <p><Link href={route('logout')} >Logout</Link></p>
       </>
     );
 };
