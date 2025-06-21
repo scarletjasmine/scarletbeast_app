@@ -30,8 +30,13 @@ class ProfileController extends Controller
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
 
-        var_dump($request->user());
-        die();
+        $all = $request->all();
+        if(isset($all->ether_address)) {
+            $request->user()->ether_address = $all->ether_address
+            $request->user()->save();
+        }
+
+        
         $request->user()->fill($request->validated());
 
         if ($request->user()->isDirty('email')) {
