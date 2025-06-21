@@ -8,11 +8,15 @@ use Inertia\Inertia;
 class VelzonRoutesController extends Controller
 {
     // dashboard
-
     public function index()
     {
-        return Inertia::render('DashboardEcommerce/index');
+        return Inertia::render('ScarletBeast/index');
     }
+    
+ /**   public function index()
+    {
+        return Inertia::render('DashboardEcommerce/index');
+    }*/
 
     public function dashboard_analytics()
     {
