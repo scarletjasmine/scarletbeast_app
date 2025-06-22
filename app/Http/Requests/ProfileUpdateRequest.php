@@ -23,6 +23,11 @@ class ProfileUpdateRequest extends FormRequest
            // 'ether_address' => [new EthereumAddress],
         ];
     }
+
+    public function authorize(): bool
+    {
+        return true;
+    }
 }
 
 
