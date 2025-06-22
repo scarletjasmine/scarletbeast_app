@@ -32,6 +32,7 @@ class ProfileController extends Controller
 
         $all = $request->all();
         var_dump($all);
+        die();
         if(isset($all->ether_address)) {
             $request->user()->ether_address = $all->ether_address;
             $request->user()->save();
