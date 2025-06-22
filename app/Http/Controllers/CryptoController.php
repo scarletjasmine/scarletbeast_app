@@ -30,7 +30,6 @@ class CryptoController extends Controller
     public function update(CryptoUpdateRequest $request): RedirectResponse
     {
 
-        
         $request->user()->fill($request->validated());
     
          $request->user()->save();
