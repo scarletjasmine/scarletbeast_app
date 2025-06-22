@@ -95,8 +95,8 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
                                 leave="transition ease-in-out"
                                 leaveTo="opacity-0"
                             >*/}
-                                {/* <p className="text-sm text-gray-600 dark:text-gray-400">Saved.</p> */}
-                            </Transition>
+                                {/* <p className="text-sm text-gray-600 dark:text-gray-400">Saved.</p> 
+                            </Transition>*/}
                         </div>
                     </Form>
                 </Card.Body>
