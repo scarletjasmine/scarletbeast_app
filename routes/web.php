@@ -3,6 +3,7 @@
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VelzonRoutesController;
+use App\Http\Controllers\CryptoController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
