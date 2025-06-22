@@ -88,13 +88,13 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
                         <div className="flex items-center gap-4 mt-4">
                             <Button variant="success" disabled={processing} type='submit' className='btn btn-success'>Save</Button>
 
-                            <Transition
+                            {/*<Transition
                                 show={recentlySuccessful}
                                 enter="transition ease-in-out"
                                 enterFrom="opacity-0"
                                 leave="transition ease-in-out"
                                 leaveTo="opacity-0"
-                            >
+                            >*/}
                                 {/* <p className="text-sm text-gray-600 dark:text-gray-400">Saved.</p> */}
                             </Transition>
                         </div>

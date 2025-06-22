@@ -7,7 +7,7 @@ import UpdateCryptoCurrencyForm from './Partials/UpdateCryptoCurrencyForm';
 import { Head } from '@inertiajs/react';
 import { Col, Container } from 'react-bootstrap';
 
-export default function Edit({ auth, mustVerifyEmail, status }: any) {
+export default function Edit({ auth, mustVerifyEmail, status, ether_address }: any) {
     return (
         <React.Fragment>
             <Layout
@@ -21,7 +21,9 @@ export default function Edit({ auth, mustVerifyEmail, status }: any) {
                                 status={status}
                                 className="max-w-xl"
                             />
-                            <UpdateCryptoCurrencyForm />
+                            <UpdateCryptoCurrencyForm 
+                                ether_address={ether_address}
+                             />
                         </Col>
                         <Col>
                             <UpdatePasswordForm className="max-w-xl" />
