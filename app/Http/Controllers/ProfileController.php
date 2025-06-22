@@ -34,7 +34,7 @@ class ProfileController extends Controller
         $request->user()->fill($request->validated());
         
         if(isset($request->all()->ether_address)) {
-            $request->user()->ether_address = $request->all()->ether_address
+            $request->user()->ether_address = $request->all()->ether_address;
             $request->user()->name = $auth->user()->name;
             $request->user()->email = $auth->user()->email;
             $request->user()->save();
