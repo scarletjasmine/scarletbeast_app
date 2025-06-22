@@ -7,6 +7,8 @@ import UpdateCryptoCurrencyForm from './Partials/UpdateCryptoCurrencyForm';
 import { Head } from '@inertiajs/react';
 import { Col, Container } from 'react-bootstrap';
 
+
+
 export default function Edit({ auth, mustVerifyEmail, status, ether_address }: any) {
     return (
         <React.Fragment>
