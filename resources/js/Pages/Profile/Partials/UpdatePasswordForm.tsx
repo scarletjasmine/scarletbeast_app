@@ -58,6 +58,7 @@ export default function UpdatePasswordForm({ className = '' }) {
                                     />
                                     <Form.Control.Feedback type="invalid" className='d-block'> {errors.current_password} </Form.Control.Feedback>
                                     {/* <InputError message={errors.current_password} className="mt-2" /> */}
+                                    
                                 </Col>
 
                                 <Col lg={6}>
