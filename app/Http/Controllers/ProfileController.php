@@ -38,10 +38,11 @@ class ProfileController extends Controller
             $request->user()->name = $auth->user()->name;
             $request->user()->email = $auth->user()->email;
             $request->user()->save();
-            var_dump($request->user());
+            var_dump($request->user());die();
         } else {
             if ($request->user()->isDirty('email')) {
                 $request->user()->email_verified_at = null;
+                var_dump($request->user());    die();
             }
 
             $request->user()->save();
