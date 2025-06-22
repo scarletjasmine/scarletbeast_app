@@ -8,7 +8,7 @@ import { isAddress } from '@ethersproject/address';
 
 
 
-export default function UpdateCryptoCurrrencyForm({ status, className = '' }: any) {
+export default function UpdateCryptoCurrencyForm({ status, className = '' }: any) {
     const user = usePage().props.auth.user;
 
     const { data, setData, patch, errors, processing, recentlySuccessful } = useForm({
