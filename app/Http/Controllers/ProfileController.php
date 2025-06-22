@@ -30,22 +30,21 @@ class ProfileController extends Controller
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
 
-        $all = $request->all();
-        var_dump($all);
-        die();
-        if(isset($all->ether_address)) {
-            $request->user()->ether_address = $all->ether_address;
-            $request->user()->save();
-        }
-
         
         $request->user()->fill($request->validated());
+        
+        if(isset($request->all()->ether_address)) {
+            $request->user()->ether_address = $request->all()->ether_address
+            $request->user()->name = $auth->user()->name;
+            $request->user()->email = $auth->user()->email;
+            $request->user()->save();
+        } else {
+            if ($request->user()->isDirty('email')) {
+                $request->user()->email_verified_at = null;
+            }
 
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
+            $request->user()->save();
         }
-
-        $request->user()->save();
 
         return Redirect::route('profile.edit');
     }
