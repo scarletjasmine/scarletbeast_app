@@ -25,7 +25,7 @@ export default function UpdateCryptoCurrencyForm({ status, className = '' }: any
         if (!isValidEthereumAddress(data.ether_address)){
             alert('Invalid Ethereum address');
         }
-        patch(route('profile.cryupdate'));
+        patch(route('profile.crypto.update'));
     };
 
     return (
