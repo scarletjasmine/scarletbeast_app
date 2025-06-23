@@ -27,6 +27,13 @@ use Inertia\Inertia;
 //     ]);
 // });
 
+
+Route::get('/', function () {
+    return Inertia::render('scarletbeast/index');
+})->name('scarletbeast.chat');
+
+
+
 // Route::get("/apps-ecommerce-orders", [ProfileController::class, 'index'])->name('order-list');
 //Route::redirect('/', '/dashboard');
 Route::middleware('auth')->group(function () {
