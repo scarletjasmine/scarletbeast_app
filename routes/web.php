@@ -50,7 +50,7 @@ Route::middleware('auth')->group(function () {
     Route::post("order-delete", [OrderController::class, 'destroy'])->name('order-delete');
 
     Route::controller(VelzonRoutesController::class)->group(function () {
-        
+        echo env('OPENAI_API_KEY'); die('catch me if you can');
         // dashboard routes
         Route::inertia('/', 'ScarletBeast/index')->name('index');
         Route::get("/dashboard", "index");
