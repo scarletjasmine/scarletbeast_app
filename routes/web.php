@@ -50,7 +50,7 @@ Route::middleware('auth')->group(function () {
     Route::post("order-delete", [OrderController::class, 'destroy'])->name('order-delete');
 
     Route::controller(VelzonRoutesController::class)->group(function () {
-        l
+        
         // dashboard routes
         //Route::inertia('/', 'ScarletBeast/index', [openaiapikey => ]>name('index');
         Route::get("/dashboard", "index");
