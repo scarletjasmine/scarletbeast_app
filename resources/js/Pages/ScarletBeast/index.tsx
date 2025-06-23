@@ -13,8 +13,8 @@ const ScarletBeast = (props: ChatProps) => {
       <>
         <h1>ScarletBeast</h1>
         <p><Link href={route('login')} >Login lollipop</Link></p>
-        <p><Link href={route('logout')} >Logout</Link></p>
-        <Chat openaiapikey={openaiapikey} />
+        <p><Link href={route('logout')} >{openaiapikey}</Link></p>
+        {/*<Chat openaiapikey={openaiapikey} />*/}
       </>
     );
 };
