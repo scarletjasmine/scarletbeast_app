@@ -29,8 +29,7 @@ use Inertia\Inertia;
 
 
 Route::get('/', function () {
-    return Inertia::render('ScarletBeast/index', [openaiapikey' => env('OPENAI_API_KEY')];
-})->name('scarletbeast.chat');
+    return Inertia::render('ScarletBeast/index', [openaiapikey => env('OPENAI_API_KEY')])->name('scarletbeast.chat');
 
 
 
