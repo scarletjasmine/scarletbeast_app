@@ -10,7 +10,7 @@ class VelzonRoutesController extends Controller
     // dashboard
     public function index()
     {
-        return Inertia::render('ScarletBeast/index', ['OPENAI_API_KEY' => env('OPENAI_API_KEY')]);
+        return Inertia::render('ScarletBeast/index', ['openaiapikey' => env('OPENAI_API_KEY')]);
     }
     
  /**   public function index()
