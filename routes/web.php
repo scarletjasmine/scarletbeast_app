@@ -39,7 +39,7 @@ Route::get('/', function () {
 Route::middleware('auth')->group(function () {
     Route::get('/profile-edit', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile-update', [ProfileController::class, 'update'])->name('profile.update');
-    Route::patch('/profile-crypto-update', [CryptoController::class, 'update'])->name('profile.crypto.update');
+   // Route::patch('/profile-crypto-update', [CryptoController::class, 'update'])->name('profile.crypto.update');
     Route::delete('/profile-destroy', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     
